@@ -43,13 +43,13 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          ChatGPT Proxy App, by philipckwan [v0.5]
+          ChatGPT Proxy App, by philipckwan [v0.6]
         </p>
       </div>
       <br/>
       <div className="flex flex-col justify-center items-center h-[100vh]">
       <p>Use this Chat-GPT proxy to come up with Chinese fill in the blanks questions</p>  
-        <div className="!z-5 relative flex flex-col rounded-[20px] max-w-[300px] md:max-w-[400px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-6 3xl:p-![18px] bg-white undefined">                
+        <div className="!z-5 relative flex flex-col rounded-[20px] max-w-[600px] md:max-w-[800px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-6 3xl:p-![18px] bg-white undefined">                
           <div className="relative flex flex-row justify-between">
               <h4 className="text-xl font-bold text-navy-700 dark:text-white mb-3">
                   填充題
