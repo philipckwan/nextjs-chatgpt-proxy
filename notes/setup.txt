@@ -1,0 +1,56 @@
+-----------------------------------------------------------------
+client (nextjs-chatgpt-proxy)
+--------------------------
+
+Follow this link to bootstrap the next app:
+https://vercel.com/templates/next.js/nextjs-boilerplate
+https://nextjs.org/learn/basics/create-nextjs-app/setup
+
+$ pwd
+/Users/philip/workspaces/workspace-git/nextjs-chatgpt-proxy
+$ npx create-next-app
+
+Need to install the following packages:
+  create-next-app@13.4.2
+Ok to proceed? (y) y
+✔ What is your project named? … chatgpt-proxy
+✔ Would you like to use TypeScript with this project? … No / Yes
+...
+
+
+
+
+-----------------------------------------------------------------
+server (copied from "proj-trip_photo_map-3_server")
+--------------------------
+setup:
+
+$ cd server
+
+$ npm init -y
+
+$ npm i express
+
+install nodemon
+
+$ npm i nodemon -D
+
+update package.json with:
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+
+also, to be able to import the shared library:
+  "type": "module",
+
+
+-----------------------------------------------------------------
+
+to run:
+
+$ cd server
+$ npm run dev
+
+-----------------------------------------------------------------
