@@ -26,7 +26,7 @@ export default function Home(props) {
 
     let envSource = process.env.ENV_SOURCE;
     let accessToken = process.env.ACCESS_TOKEN;
-    let debug = true;
+    let debug = false;
     timeLog(`handleAskChatGPT: envSource:${envSource}; accessToken:${accessToken};`);
 
     //timeLog(`handleAskChatGPT: props:[${JSON.stringify(props)}]`);
