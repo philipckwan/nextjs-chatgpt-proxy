@@ -1,0 +1,4 @@
+to run this webapp locally:
+
+$ cd chatgpt-proxy
+$ npm run dev

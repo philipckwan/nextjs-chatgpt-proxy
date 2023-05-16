@@ -54,3 +54,7 @@ $ cd server
 $ npm run dev
 
 -----------------------------------------------------------------
+
+To obtain ChatGPT access token:
+
+https://chat.openai.com/api/auth/session
