@@ -1,8 +1,8 @@
 todo:
 
--remove the hardcoded access token, move to use environment variables
--separate the services (fill-in-the-blanks questions, ask anything) into different pages
+DONE-remove the hardcoded access token, move to use environment variables
+DONE-separate the services (fill-in-the-blanks questions, ask anything) into different pages
 -improve the UI to support web vs mobile
 -enhance the UI for fill-in-the-blanks questions
--default to chatgpt-3.5 so that to save the quota for chatgpt-4
+DONE-allow to choose between chatgpt-3.5 and chatgpt-4; default to chatgpt-3.5 so as to save the quota for chatgpt-4
 -more interactivity so that the chatgpt prcessing doesn't appear stuck
