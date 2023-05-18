@@ -2,7 +2,11 @@ todo:
 
 DONE-remove the hardcoded access token, move to use environment variables
 DONE-separate the services (fill-in-the-blanks questions, ask anything) into different pages
--improve the UI to support web vs mobile
 -enhance the UI for fill-in-the-blanks questions
 DONE-allow to choose between chatgpt-3.5 and chatgpt-4; default to chatgpt-3.5 so as to save the quota for chatgpt-4
 -more interactivity so that the chatgpt prcessing doesn't appear stuck
+DONE(v0.15)-fix the UI so that in mobile view, the textarea doesn't go off to the right
+-add a service to support pre-defined prompts
+DONE(v0.15)-track conversations with parent question
+-consider to use the onProgress so that the response can be streamed
+-copy to clipboard each 1 of the 5 fill-in-the-blanks answers

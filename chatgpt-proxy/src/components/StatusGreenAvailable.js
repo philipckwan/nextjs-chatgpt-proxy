@@ -5,7 +5,7 @@ export function StatusGreenAvailable() {
       <tbody>
         <tr>
           <td><div className="w-5 h-5 bg-green-600 rounded-full"></div></td>
-          <td>ChatGPT is available for you to ask a question now</td>
+          <td>ChatGPT is available for you to start asking a question now</td>
         </tr>                
       </tbody>
     </table>            

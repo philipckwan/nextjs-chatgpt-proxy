@@ -78,7 +78,7 @@ export default function FillInTheBlanks() {
 
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-12">
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           ChatGPT Proxy App, by philipckwan [{Constants.APP_VERSION}]
@@ -100,9 +100,9 @@ export default function FillInTheBlanks() {
               <br/><Dropdown3 ref={chatgptModelPicked} title={"Pick a model:  "}></Dropdown3>
               <button onClick={handleAskChatGPT} className="mt-2 inline-block p-3 rounded-lg shadow-sm bg-indigo-500 text-white">Ask Chat-GPT</button>
           </div>
-          <div className="border-2">
-            <p>From ChatGPT:</p>
-            <textarea value={answer} rows="8" cols="80" readOnly/>
+          <div className="mb-3">
+            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">From ChatGPT:</label>
+            <textarea readOnly value={answer} id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ChatGPT answer goes here..."></textarea>
           </div>
         </div>
       </div>
