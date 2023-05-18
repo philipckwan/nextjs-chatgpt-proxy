@@ -13,7 +13,7 @@ const PLACEHOLDER_QUESTION="What ChatGPT model are you? And what is today's date
 
 export default function Conversation() {
   const [question, setQuestion] = useState("");
-  const [answer, setAnswer] = useState("n/a");
+  const [answer, setAnswer] = useState("");
   const chatgptModelPicked = useRef("n/a");
   const [chatgptState, setChatgptState] = useState(Constants.CHATGPT_CONVERSATION_STATE.FRESH);
   //const [isBusy, setIsBusy] = useState(false);
@@ -106,8 +106,8 @@ export default function Conversation() {
               <br/><button onClick={handleResetConversation} className="mt-2 inline-block p-3 rounded-lg shadow-sm bg-indigo-500 text-white">Reset ChatGPT to start a new conversation</button>
           </div>
           <div className="mb-3">
-            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">From ChatGPT:</label>
-            <textarea readOnly value={answer} id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ChatGPT answer goes here..."></textarea>
+            <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">From ChatGPT:</label>
+            <textarea readOnly value={answer} id="message" rows="4" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ChatGPT answer goes here..."></textarea>
           </div>
         </div>
       </div>

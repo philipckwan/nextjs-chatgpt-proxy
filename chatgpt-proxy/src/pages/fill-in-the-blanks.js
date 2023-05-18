@@ -12,8 +12,8 @@ import {StatusRedBusy} from "../components/StatusRedBusy";
 
 export default function FillInTheBlanks() {
 
-  const [phrase, setPhrase] = useState("擴散");
-  const [answer, setAnswer] = useState("n/a");
+  const [phrase, setPhrase] = useState("高興");
+  const [answer, setAnswer] = useState("");
   const chatgptModelPicked = useRef("n/a");
   const [isBusy, setIsBusy] = useState(false);
 
@@ -52,7 +52,7 @@ export default function FillInTheBlanks() {
       model,
     });
     
-    const question=`你是一個小學四年級中文老師。用以下的詞語做填充題的題目。給我不少於五句。每一句不得少於十五個字，不得多於二十五個字。結果要用繁體中文來顯示。句子得難度不可以超過小學四年級，即十歲小孩的程度。 詞語:${phrase}`;
+    const question=`你是一個小學四年級中文老師。用以下的詞語做填充題的題目。給我不少於五句。每一句不得少於十五個字，不得多於二十五個字。結果要用繁體中文來顯示。句子得難度不可以超過小學四年級，即十歲小孩的程度。請用五條橫線來代替那個詞語。每一句用數字列出來，即"1.","2."。 詞語:${phrase}`;
   
     timeLog(`FillInTheBlanks.handleAskChatGPT: question:[${question}];`);
     api.sendMessage(question).then(
@@ -93,16 +93,16 @@ export default function FillInTheBlanks() {
                   填充題
               </h4>
           </div>*/}
-          {isBusy ? <StatusRedBusy></StatusRedBusy> : <StatusGreenAvailable></StatusGreenAvailable>}
+          {isBusy ? <StatusRedBusy></StatusRedBusy> : <StatusGreenAvailable></StatusGreenAvailable>}<br/>
           <div className="mb-3">
-              <label className="text-sm text-navy-700 dark:text-white font-bold">詞語</label>
+              <label className="text-sm text-navy-700 dark:text-white">我想要 ChatGPT 幫我用這個詞語來做填充題：</label>
               <input onChange={handlePhraseChange} value={phrase} type="text" id="phrase" name="phrase" className="mt-2 flex h-12 w-full items-center justify-center rounded-xl border bg-white/0 p-3 text-sm outline-none border-gray-200"></input>
               <br/><Dropdown3 ref={chatgptModelPicked} title={"Pick a model:  "}></Dropdown3>
               <button onClick={handleAskChatGPT} className="mt-2 inline-block p-3 rounded-lg shadow-sm bg-indigo-500 text-white">Ask Chat-GPT</button>
           </div>
           <div className="mb-3">
-            <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">From ChatGPT:</label>
-            <textarea readOnly value={answer} id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ChatGPT answer goes here..."></textarea>
+            <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">From ChatGPT:</label>
+            <textarea readOnly value={answer} id="message" rows="8" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="ChatGPT answer goes here..."></textarea>
           </div>
         </div>
       </div>

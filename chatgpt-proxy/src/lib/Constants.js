@@ -1,7 +1,7 @@
 
 class Constants {
 
-  static APP_VERSION = "v0.15";
+  static APP_VERSION = "v0.17";
 
   static CHATGPT_MODEL = {
     GPT_4: "gpt-4",
