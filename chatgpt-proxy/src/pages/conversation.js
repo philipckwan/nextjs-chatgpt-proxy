@@ -12,7 +12,6 @@ const PLACEHOLDER_QUESTION="What ChatGPT model are you? And what is today's date
 export default function Conversation() {
   const [question, setQuestion] = useState("");
   const [answer, setAnswer] = useState("");
-  const chatgptModelPicked = useRef("n/a");
   const [modelPicked, setModelPicked] = useState(Constants.CHATGPT_MODEL.GPT_3_5_TURBO);
   const [chatgptState, setChatgptState] = useState(Constants.CHATGPT_CONVERSATION_STATE.FRESH);
   const conversationIdRef = useRef("");

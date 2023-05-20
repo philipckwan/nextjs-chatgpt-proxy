@@ -11,8 +11,6 @@ export default function Landing() {
     <div>
       <p>This is Landing. [{Constants.APP_VERSION}]</p>
       <p>Go to <Link href="admin">Admin page</Link></p>
-      <p>Go to <Link href="fill-in-the-blanks">Fill In the Blanks page</Link></p>
-      <p>Go to <Link href="ask-anything">Ask ChatGPT Anything page</Link></p>
       <p>Go to <Link href="conversation">Conversation with ChatGPT</Link></p>
       <p>Go to <Link href="fill-in-the-blanks-chinese">Fill In the Blanks (Chinese) page</Link></p>
       <p>Go to <Link href="fill-in-the-blanks-prepositions">Fill In the Blanks (Prepositions) page</Link></p>
