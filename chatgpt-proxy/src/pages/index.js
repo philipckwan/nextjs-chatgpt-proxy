@@ -15,6 +15,7 @@ export default function Landing() {
       <p>Go to <Link href="ask-anything">Ask ChatGPT Anything page</Link></p>
       <p>Go to <Link href="conversation">Conversation with ChatGPT</Link></p>
       <p>Go to <Link href="fill-in-the-blanks-chinese">Fill In the Blanks (Chinese) page</Link></p>
+      <p>Go to <Link href="fill-in-the-blanks-prepositions">Fill In the Blanks (Prepositions) page</Link></p>
     </div>
   );
 }
