@@ -120,6 +120,7 @@ export default function FillInTheBlanksPrepositions() {
       },
     );
 
+    setCopied(0);
     setAnswer("");
     setAnswerWithBlanks("");
     setIsBusy(true);
