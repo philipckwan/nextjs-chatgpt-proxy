@@ -45,7 +45,8 @@ export default function Conversation() {
 
 
     timeLog(`Conversation.handleAskChatGPT: questionToAsk:[${questionToAsk}]; conversationIdRef.current:[${conversationIdRef.current}]; parentMessageIdRef.current:[${parentMessageIdRef.current}];`);
-    let sendMessageJson = (conversationIdRef.current != "") ? {conversationId: conversationIdRef.current, parentMessageId: parentMessageIdRef.current} : {};
+    const onProgress = (partialResponse) => setAnswer(partialResponse.text);
+    let sendMessageJson = (conversationIdRef.current != "") ? {conversationId: conversationIdRef.current, parentMessageId: parentMessageIdRef.current, onProgress} : {onProgress};
 
     timeLog(`Conversation.handleAskChatGPT: sendMessageJson:[${JSON.stringify(sendMessageJson)}];`);
     api.sendMessage(questionToAsk, sendMessageJson).then(
