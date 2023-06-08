@@ -85,7 +85,7 @@ export default function Conversation() {
       <div className="flex flex-col justify-center items-center h-[100vh]">
       <p>[Conversation] ChatGPT Proxy App, by philipckwan [{Constants.APP_VERSION}]</p>  
 
-        <div className="!z-5 relative flex flex-col rounded-[20px] max-w-[600px] md:max-w-[800px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-6 3xl:p-![18px] bg-white undefined">                
+        <div className="!z-5 relative flex flex-col rounded-[20px] max-w-[600px] md:max-w-[800px] bg-white dark:bg-gray-800 dark:text-gray-200 bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-6 3xl:p-![18px]">                
           {chatgptState == Constants.CHATGPT_CONVERSATION_STATE.FRESH ? <StatusGreenAvailable></StatusGreenAvailable> : chatgptState == Constants.CHATGPT_CONVERSATION_STATE.BUSY ? <StatusRedBusy></StatusRedBusy> : <StatusBlueAvailable></StatusBlueAvailable>}
           <div className="mb-3">
               <p><label className="text-sm text-navy-700 dark:text-white font-bold">Question</label></p>

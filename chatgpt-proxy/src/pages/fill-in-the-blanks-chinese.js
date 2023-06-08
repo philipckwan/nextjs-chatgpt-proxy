@@ -140,7 +140,7 @@ export default function FillInTheBlanksChinese() {
       <div className="flex flex-col justify-center items-center h-[100vh]">
       <p>ChatGPT Proxy App, by philipckwan [{Constants.APP_VERSION}]</p>
       
-        <div className="!z-5 relative flex flex-col rounded-[20px] max-w-[600px] md:max-w-[800px] bg-white bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-6 3xl:p-![18px] bg-white undefined">
+        <div className="!z-5 relative flex flex-col rounded-[20px] max-w-[600px] md:max-w-[800px] bg-white dark:bg-gray-800 dark:text-gray-200 bg-clip-border shadow-3xl shadow-shadow-500 flex flex-col w-full !p-6 3xl:p-![18px]">
           {isBusy ? <StatusRedBusy></StatusRedBusy> : <StatusGreenAvailable></StatusGreenAvailable>}<br/>
           <div className="mb-3">
               <label className="text-sm text-navy-700 dark:text-white">我想要 ChatGPT 幫我用這個詞語來做填充題：</label>

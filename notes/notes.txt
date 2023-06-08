@@ -12,3 +12,4 @@ DONE(v0.19)-copy to clipboard each 1 of the 5 fill-in-the-blanks answers
 DONE(v0.19)-fix the splitting and parsing issues with the 5 fill-in-the-blanks answers
 DONE(v0.20)-fix when a conversation is run from the proxy, it cannot be shown properly on the web UI
 DONE(v0.21)-for fill-in-the-blanks-prepositions, allow to copy the story (with the prepositions, or with an underline) to the clipboard
+DONE(v0.25)-bug; night mode on mobile browser makes some text invisible
