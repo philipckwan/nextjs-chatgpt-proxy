@@ -18,43 +18,6 @@ Ok to proceed? (y) y
 ...
 
 
-
-
------------------------------------------------------------------
-server (copied from "proj-trip_photo_map-3_server")
---------------------------
-setup:
-
-$ cd server
-
-$ npm init -y
-
-$ npm i express
-
-install nodemon
-
-$ npm i nodemon -D
-
-update package.json with:
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server",
-    "dev": "nodemon server"
-  },
-
-also, to be able to import the shared library:
-  "type": "module",
-
-
------------------------------------------------------------------
-
-to run:
-
-$ cd server
-$ npm run dev
-
------------------------------------------------------------------
-
 To obtain ChatGPT access token:
 
 https://chat.openai.com/api/auth/session
