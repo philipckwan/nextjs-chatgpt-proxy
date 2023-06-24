@@ -14,3 +14,5 @@ DONE(v0.20)-fix when a conversation is run from the proxy, it cannot be shown pr
 DONE(v0.21)-for fill-in-the-blanks-prepositions, allow to copy the story (with the prepositions, or with an underline) to the clipboard
 DONE(v0.25)-bug; night mode on mobile browser makes some text invisible
 DONE(v0.26)-add syntax highlighting to code, e.g. python code syntax highlighting
+
+DONE(v1.0)-add an admin page and function to allow update of the session token
