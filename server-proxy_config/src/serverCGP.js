@@ -56,9 +56,9 @@ app.get("/config/access_token", (req, res) => {
   res.json({access_token: accessToken});
 })
 
-
-app.listen(5000, () => {
+let serverPort = parseInt(process.env.SERVER_PORT);
+app.listen(serverPort, () => {
   //timeLog("serverBattleship: Server started on port 5000 pck; 3.3");
-  timeLog(`serverCGP: Server started on port 5000; pck: version:${Constants.version};`);
+  timeLog(`serverCGP: Server started on port ${serverPort}; pck: version:${Constants.version};`);
 
 })
