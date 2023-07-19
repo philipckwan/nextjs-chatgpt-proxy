@@ -3,6 +3,7 @@ import {timeLog} from "./PCKUtils"
 
 const apiReverseProxyUrl = "https://ai.fakeopen.com/api/conversation";
 const accessTokenFromEnv = process.env.ACCESS_TOKEN;
+const accessTokenFallbackFromEnv = process.env.ACCESS_TOKEN_FALLBACK;
 const ACCESS_TOKEN_FROM_ENV_BYPASS = "bypass";
 
 export class ChatGPTProxyEngine {
@@ -12,17 +13,23 @@ export class ChatGPTProxyEngine {
     let accessToken;
     if (accessTokenFromEnv == ACCESS_TOKEN_FROM_ENV_BYPASS) {
       timeLog(`ChatGPTProxyEngine.instantiateAPI: getting accessToken from server;`);
-      const response = await fetch(`/api/config/access_token`, {
-        method: "get",
-        headers: {'Content-Type':'application/json'},
-      });
-      let respJson = await response.json();
-      accessToken = respJson.access_token;
+      try {
+        const response = await fetch(`/api/config/access_token`, {
+          method: "get",
+          headers: {'Content-Type':'application/json'},
+        });
+        let respJson = await response.json();
+        accessToken = respJson.access_token;
+      } catch (e) {
+        timeLog(`ChatGPTProxyEngine.instantiateAPI: ERROR - [${e}]; will attempt to use ACCESS_TOKEN_FALLBACK`);
+        accessToken = accessTokenFallbackFromEnv;
+      }
+
     } else {
       timeLog(`ChatGPTProxyEngine.instantiateAPI: getting accessToken from env;`);
       accessToken = accessTokenFromEnv;
     }    
-    timeLog(`__accessToken:[${accessToken}];`);
+    //timeLog(`__accessToken:[${accessToken}];`);
     //timeLog(`ChatGPTProxyEngine.instantiateAPI: accessTokenFromEnv.length:[${accessTokenFromEnv.length}]; accessTokenFromEnv[0...9]:[${accessTokenFromEnv.substring(0,10)}];`);
     //timeLog(`ChatGPTProxyEngine.instantiateAPI: accessTokenFromAPI.length:[${accessTokenFromAPI.length}]; accessTokenFromAPI[0...9]:[${accessTokenFromAPI.substring(0,10)}];`);
     const chatgpt = await import('chatgpt');

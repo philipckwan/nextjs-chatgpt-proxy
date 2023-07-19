@@ -1,5 +1,5 @@
 export function timeLog(msg) {
   let current = new Date();
   let currentTime  = current.toLocaleTimeString();
-  console.log(`v1-[${currentTime}]${msg}`);
+  console.log(`[${currentTime}]${msg}`);
 };

@@ -8,6 +8,7 @@ module.exports = {
   env: {
     ENV_SOURCE: process.env.ENV_SOURCE,
     ACCESS_TOKEN: process.env.ACCESS_TOKEN,
+    ACCESS_TOKEN_FALLBACK: process.env.ACCESS_TOKEN_FALLBACK,
   },
   async rewrites() {
     return [

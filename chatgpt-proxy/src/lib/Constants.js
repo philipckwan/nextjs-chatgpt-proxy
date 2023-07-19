@@ -1,7 +1,7 @@
 
 export class Constants {
 
-  static APP_VERSION = "v1.0";
+  static APP_VERSION = "v1.1";
   static CHATGPT_MODEL = {
     GPT_4: "gpt-4",
     GPT_3_5_TURBO: "gpt-3.5-turbo",
